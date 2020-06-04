@@ -5,6 +5,7 @@
   --landscape-phone-top : 2vh;
   --top-bg-col:#99D0F2;
   --info-box-color: rgba(0,0,0,0) 50%, #0BD904 50%;
+  --filter-shadow:0.189vh;
 }
 
 @media (max-width:1366px)
