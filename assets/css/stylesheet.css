@@ -1,7 +1,7 @@
 :root {
   --mobile-right : 1vh;
   --other-right  : 10vh;
-  --semi-portrait-top: 5vh;
+  --semi-portrait-top: 10vh;
   --landscape-phone-top : 2vh;
   --top-bg-col:#99D0F2;
   --info-box-color: rgba(0,0,0,0) 50%, #0BD904 50%;
@@ -99,8 +99,8 @@ and (orientation:portrait){
     font-size: 2vh;
   }
 
-  .top-logo {
-    font-size:5vh;
+  .top-logo img {
+    height:10vh;
   }
 
   .top-menu {
@@ -154,6 +154,22 @@ and (orientation:portrait){
   .promo-foot a:link, a:visited {
     color:white;
   }
+
+  .bottomDetailed{
+    position: absolute;
+    top:40vh;
+    left:5vh;
+    height:10vh;
+    animation: downButton 1s infinite;
+  }
+
+  @keyframes downButton {
+    0% {
+      top:40vh;
+    }25%{
+      top:45vh;
+    }
+  }
 }
 
 @media (min-width:601px)
@@ -164,7 +180,7 @@ and (orientation:landscape) {
   }
 
   .torso {
-    top: calc((80vh / 3061 * 405) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px) + 5vh);
+    top: calc((80vh / 3061 * 405) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px) + var(--semi-portrait-top));
     right: calc((80vh / 3061 * 30) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px) + var(--other-right));
   }
 
@@ -248,8 +264,8 @@ and (orientation:landscape) {
     font-size: 3.2vh;
   }
 
-  .top-logo {
-    font-size:5vh;
+  .top-logo img {
+    height:15vh;
   }
 
   .top-menu {
@@ -291,6 +307,9 @@ and (orientation:landscape) {
 
   .promo-foot a:link, a:visited {
     color:white;
+  }
+  .bottomDetailed{
+    display:none;
   }
 }
 
@@ -386,8 +405,8 @@ and (orientation:landscape) {
     font-size: 3.2vh;
   }
   
-  .top-logo {
-    font-size:10vh;
+  .top-logo img {
+    height:15vh;
   }
 
   .top-menu {
@@ -433,6 +452,10 @@ and (orientation:landscape) {
 
   .promo-foot a:link, a:visited {
     color:white;
+  }
+
+  .bottomDetailed{
+    display:none;
   }
 }
 
