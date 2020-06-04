@@ -3,6 +3,8 @@
   --other-right  : 10vh;
   --semi-portrait-top: 5vh;
   --landscape-phone-top : 2vh;
+  --top-bg-col:#99D0F2;
+  --topFont:
 }
 
 @media (max-width:1366px)
@@ -69,30 +71,6 @@ and (orientation:portrait){
     z-index:1000;
   }
 
-  .dress-line {
-    right :calc(13vh + var(--mobile-right));
-    top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
-  }
-
-  .dress-info {
-    right :calc(13vh + var(--mobile-right));
-    top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
-  }
-
-  .shawl-line {
-    right :calc(13vh + var(--mobile-right));
-    top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
-  }
-
-  .shawl-info {
-    right :calc(20vh + var(--mobile-right));
-    top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
-  }
-
   .pants-line {
     right :calc(24vh + var(--mobile-right));
     top : calc(59.4vh + var(--semi-portrait-top));
@@ -101,7 +79,7 @@ and (orientation:portrait){
 
   .pants-info {
     right :calc(29vh + var(--mobile-right));
-    top : calc(55.4vh + var(--semi-portrait-top));
+    top : calc(54.4vh + var(--semi-portrait-top));
     z-index:1000;
   }
 
@@ -120,6 +98,15 @@ and (orientation:portrait){
   .info-box span {
     font-size: 2vh;
   }
+
+  .top-logo {
+    font-size:5vh;
+  }
+
+  .top-menu {
+    font-size:2vh;
+  }
+  
 }
 
 @media (min-width:601px)
@@ -175,57 +162,51 @@ and (orientation:landscape) {
   }
 
   .torso-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(13vh + var(--other-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .torso-info {
-    top : 40vh;
-    right : 40vh;
-  }
-
-  .dress-line {
-    top : 40vh;
-    right : 25vh;
-  }
-
-  .dress-info {
-    top : 40vh;
-    right : 40vh;
-  }
-
-  .shawl-line {
-    top : 40vh;
-    right : 25vh;
-  }
-
-  .shawl-info {
-    top : 40vh;
-    right : 40vh;
+    top : calc(15vh + var(--semi-portrait-top));  
+    right : calc(28vh + var(--other-right));
+    z-index:1000;
   }
 
   .pants-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(24vh + var(--other-right));
+    top : calc(59.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .pants-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29vh + var(--other-right));
+    top : calc(54.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shoes-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(28vh + var(--other-right));
+    top : calc(76.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shoes-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29.5vh + var(--other-right));
+    top : calc(70.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .info-box span {
     font-size: 3.2vh;
+  }
+
+  .top-logo {
+    font-size:5vh;
+  }
+
+  .top-menu {
+    font-size:3.2vh;
   }
 }
 
@@ -282,57 +263,55 @@ and (orientation:landscape) {
   }
 
   .torso-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(13vh + var(--other-right));
+    top : calc(19.4vh + var(--landscape-phone-top));
+    z-index:1000;
   }
 
   .torso-info {
-    top : 40vh;
-    right : 40vh;
-  }
-
-  .dress-line {
-    top : 40vh;
-    right : 25vh;
-  }
-
-  .dress-info {
-    top : 40vh;
-    right : 40vh;
-  }
-
-  .shawl-line {
-    top : 40vh;
-    right : 25vh;
-  }
-
-  .shawl-info {
-    top : 40vh;
-    right : 40vh;
+    top : calc(15vh + var(--landscape-phone-top));  
+    right : calc(28vh + var(--other-right));
+    z-index:1000;
   }
 
   .pants-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(24vh + var(--other-right));
+    top : calc(59.4vh + var(--landscape-phone-top));
+    z-index:1000;
   }
 
   .pants-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29vh + var(--other-right));
+    top : calc(54.4vh + var(--landscape-phone-top));
+    z-index:1000;
   }
 
   .shoes-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(28vh + var(--other-right));
+    top : calc(76.4vh + var(--landscape-phone-top));
+    z-index:1000;
   }
 
   .shoes-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29.5vh + var(--other-right));
+    top : calc(69.4vh + var(--landscape-phone-top));
+    z-index:1000;
   }
 
   .info-box span {
     font-size: 3.2vh;
+  }
+  
+  .top-logo {
+    font-size:10vh;
+  }
+
+  .top-menu {
+    font-size:5vh;
+  }
+
+  .dummy {
+    flex-grow: 2;
   }
 }
 
@@ -376,6 +355,34 @@ and (orientation:landscape) {
     drop-shadow(-0.189vh -0.189vh 0 red);
     
 }
+body, .topBackground,html {
+  margin:0;
+  padding:0;
+}
+
+.topNav {
+  display:flex;
+  color:white;
+  align-items: center;
+}
+
+.top-logo {
+  flex-grow:1;
+  text-align-last: center;
+}
+
+.top-menu {
+  flex-grow: 9;
+  display: flex;
+  justify-content: space-around;
+}
+
+.topBackground {
+  background-color:var(--top-bg-col);
+  width:100%;
+  height:100vh;
+}
+
 .full {
   position:absolute;
   top:5vh;

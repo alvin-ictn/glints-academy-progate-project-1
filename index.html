@@ -5,42 +5,65 @@
 <link rel="stylesheet" href="assets\css\stylesheet.css">
 </head>
 <body>
-<img class="head" src="assets\img\landing-head.png" onmousedown="return false"/>
-<img onmouseout="document.querySelector('.torso-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act torso" src="assets\img\landing-torso.png" onmousedown="return false" onclick="goToElement('#mysection',this.className)"/>
-<div class="torso-line"></div>
-<div class="torso-info info-box" onclick="goToElement('#mysection',this.className)">
-  <span>Torso</span>
-  <span class="torso-item item-value">0 Products</span>
-</div>
+    <div class="topBackground">
+        <div class="topNav">
+            <div class="top-item top-menu">
+                <a>Team</a>
+                <a>Company</a>
+            </div>
+            <div class="top-item top-logo">
+                <a>LOGO</a>
+            </div>
+            <div class="top-item top-menu">
+                <a>Product</a>
+                <a>Contact</a>
+            </div>
+            <div class="top-item dummy">
 
-<div class="dress">
-  <img class="img-act left-dress" src="assets\img\landing-left-dress.png" onmousedown="return false" onmousedown="return false"/>
-  <img class="img-act right-dress" src="assets\img\landing-right-dress.png" onmousedown="return false"/>
-</div>
-<div class="shawl">
-  <img class="img-act left-shawl" src="assets\img\landing-left-shawl.png" onmousedown="return false"/>
-  <img class="img-act right-shawl" src="assets\img\landing-right-shawl.png" onmousedown="return false"/>
-</div>
+            </div>
+        </div>
+        <div class="model">
+            <img class="head" src="assets\img\landing-head.png" onmousedown="return false"/>
+            <img onmouseout="document.querySelector('.torso-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act torso" src="assets\img\landing-torso.png" onmousedown="return false" onclick="goToElement('#product',this.className)"/>
+            <div class="torso-line"></div>
+            <div class="torso-info info-box" onclick="goToElement('#product',this.className)">
+                <span>Torso</span>
+                <span class="torso-item item-value">0 Products</span>
+            </div>
 
-<img onmouseout="document.querySelector('.pants-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.pants-item',0,100,1000)" class="img-act pants" src="assets\img\landing-pants.png" onmousedown="return false"/>
-<div class="pants-line"></div>
-<div class="pants-info info-box">
-  <span>Pants</span>
-  <span class="pants-item item-value">0 Products</span>
-</div>
+            <div class="dress">
+                <img class="img-act left-dress" src="assets\img\landing-left-dress.png" onmousedown="return false" onmousedown="return false"/>
+                <img class="img-act right-dress" src="assets\img\landing-right-dress.png" onmousedown="return false"/>
+            </div>
+            
+            <div class="shawl">
+                <img class="img-act left-shawl" src="assets\img\landing-left-shawl.png" onmousedown="return false"/>
+                <img class="img-act right-shawl" src="assets\img\landing-right-shawl.png" onmousedown="return false"/>
+            </div>
+    
+            <img onmouseout="document.querySelector('.pants-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.pants-item',0,100,1000)" class="img-act pants" src="assets\img\landing-pants.png" onmousedown="return false" onclick="goToElement('#product',this.className)"/>
+            <div class="pants-line"></div>
+            <div class="pants-info info-box" onclick="goToElement('#product',this.className)">
+                <span>Pants</span>
+                <span class="pants-item item-value">0 Products</span>
+            </div>
 
-<img onmouseout="document.querySelector('.shoes-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.shoes-item',0,100,1000)" class="img-act shoes" src="assets\img\landing-shoes.png" onmousedown="return false"/>
-<div class="shoes-line"></div>
-<div class="shoes-info info-box">
-  <span>Shoes</span>
-  <span class="shoes-item item-value">0 Products</span>
-</div>
+            <img onmouseout="document.querySelector('.shoes-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.shoes-item',0,100,1000)" class="img-act shoes" src="assets\img\landing-shoes.png" onmousedown="return false" onclick="goToElement('#product',this.className)"/>
+            <div class="shoes-line"></div>
+            <div class="shoes-info info-box" onclick="goToElement('#product',this.className)">
+                <span>Shoes</span>
+                <span class="shoes-item item-value">0 Products</span>
+            </div>
 
-<img class="left-hand" src="assets\img\landing-left-hand.png">
-<img class="right-hand" src="assets\img\landing-right-hand.png">
-
-<div style="top:1500px;position: absolute;" id="mysection">hehasdsaeh</div>
-<div id="test">ee</div>
+            <img class="left-hand" src="assets\img\landing-left-hand.png">
+            <img class="right-hand" src="assets\img\landing-right-hand.png">
+        </div>
+    </div>
+    <div class="companyInfo">
+        
+    </div>
+    <div style="top:1500px;position: absolute;" id="product">hehasdsaeh</div>
+    <div id="test">ee</div>
 </body>
   <footer>
     <script>
@@ -66,9 +89,9 @@
       const goToElement = (link,element=null) => {
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          element.split(' ')[1] == "info-box" ? document.querySelector(link).scrollIntoView() : null
+          element.split(' ')[1] == "info-box" ? document.querySelector(link).scrollIntoView({ behavior: 'smooth'}) : null
         }else {
-          document.querySelector(link).scrollIntoView()
+          document.querySelector(link).scrollIntoView({ behavior: 'smooth'})
         }
       }
     </script>
