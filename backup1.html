@@ -1,0 +1,32 @@
+<style>
+  .img {
+    width:500px;
+    position: relative;
+  }
+  
+  .img-act:hover{
+    filter:
+      drop-shadow(2px 2px 0 red)
+      drop-shadow(-2px 2px 0 red)
+      drop-shadow(2px -2px 0 red)
+      drop-shadow(-2px -2px 0 red);
+  }
+  
+  .shoes{
+    position: absolute;
+    top: 1250px;
+    left: 19px;
+    width: 400px;
+  }
+  
+  .pants{
+    position: absolute;
+    top: 655px;
+    left: 30px;
+    width: 370px;
+    opacity: 0.5;
+  }
+  </style>
+  <img class="img" src="landing-model.png"/>
+  <img class="img img-act shoes" src="landing-shoes.png"/>
+  <img class="img img-act pants" src="landing-pants.png"/>

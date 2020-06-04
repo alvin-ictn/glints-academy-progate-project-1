@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+  @media only screen 
+  and (max-device-width: 639px)
+  and (min-device-height:400px) 
+  and (max-device-height:900px){
+    .img {
+      width:10px;
+      position: relative;
+    }
+    .text::after {
+      content:" MOBILE POTRAIT";
+    }
+  }
+  
+  @media only screen 
+  and (min-device-width: 480px) 
+  and (max-device-width: 900px)
+  and (max-device-height: 500px)
+  {
+    .img {
+      width:50px;
+      position: relative;
+    }
+    .text::after {
+      content:" MOBILE LANDSCAPE  ";
+    }
+  }
+  
+  @media only screen 
+  and (min-device-width: 668px) 
+  and (max-device-width: 1024px)
+  and (min-device-height:600px) {
+    .img {
+      width:150px;
+      position: relative;
+    }
+  }
+  
+  @media only screen 
+  and (min-device-width: 1281px)
+  and (min-device-height:600px) {
+    .img {
+      width:30px;
+      position: relative;
+    }
+  }
+  
+  
+  .img-act:hover{
+    filter:
+      drop-shadow(2px 2px 0 red)
+      drop-shadow(-2px 2px 0 red)
+      drop-shadow(2px -2px 0 red)
+      drop-shadow(-2px -2px 0 red);
+  }
+  
+  .shoes{
+    position: absolute;
+    top: 498.8px;
+    left: 7.2px;
+    width: 158.4px;
+    opacity: 0.5;
+  }
+  
+  .pants{
+    position: absolute;
+    top: 260px;
+    left: 12px;
+    width: 148px;
+    opacity: 0.5;
+  }
+  </style>
+</head>
+<body>
+<a class="text">ITS</a>
+<img class="img" src="landing-model.png"/>
+<img class="img img-act shoes" src="landing-shoes.png"/>
+<img class="img img-act pants" src="landing-pants.png"/>
+<div id="width"></div>
+<div id="height"></div>
+<script>
+  const x = () =>{
+    document.getElementById('width').innerText=`width = ${screen.width}`;
+    document.getElementById('height').innerText=`height = ${screen.height}`;
+  }
+  setInterval(x,0.5)
+</script>
+</body>
+
+</html>

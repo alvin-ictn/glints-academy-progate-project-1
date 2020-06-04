@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<img class="head" src="landing-head.png"/>
+<img onmouseout="document.querySelector('.torso-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act torso" src="landing-torso.png"/>
+<div class="torso-line"></div>
+<div class="torso-info">
+  <span>Torso</span>
+  <span class="torso-item">0 Products</span>
+</div>
+
+<div class="dress">
+  <img class="img-act left-dress" src="landing-left-dress.png"/>
+  <img class="img-act right-dress" src="landing-right-dress.png"/>
+</div>
+<div class="shawl">
+  <img class="img-act left-shawl" src="landing-left-shawl.png"/>
+  <img class="img-act right-shawl" src="landing-right-shawl.png"/>
+</div>
+
+<img onmouseout="document.querySelector('.pants-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.pants-item',0,100,1000)" class="img-act pants" src="landing-pants.png"/>
+<div class="pants-line"></div>
+<div class="pants-info">
+  <span>Pants</span>
+  <span class="pants-item">0 Products</span>
+</div>
+
+<img onmouseout="document.querySelector('.shoes-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act shoes" src="landing-shoes.png"/>
+<div class="shoes-line"></div>
+<div class="shoes-info">
+  <span>Shoes</span>
+  <span class="shoes-item">0 Products</span>
+</div>
+
+<img class="left-hand" src="landing-left-hand.png">
+<img class="right-hand" src="landing-right-hand.png">
+
+
+</body>
+  <footer>
+    <script>
+      var myTimeout;
+      const testfun = (id, start, end, duration) => {
+        var range = end - start;
+        var current = start;
+        var increment = end > start? 1 : -1;
+        var stepTime = Math.abs(Math.floor(duration / range));
+        var obj = document.querySelector(id);
+
+        myTimeout = setTimeout(() => {
+          var timer = setInterval(function() {
+            current += increment;
+            obj.innerHTML = `${current} Products`;
+            if (current == end) {
+                clearInterval(timer);
+            }
+          }, stepTime);
+        }, 3000);
+        
+      }
+      
+      const number_animate = () => {
+
+      }
+    </script>
+  </footer>
+</html>
