@@ -5,7 +5,8 @@
   --landscape-phone-top : 2vh;
 }
 
-@media (max-width:400px){
+@media (max-width:1366px)
+and (orientation:portrait){
   .head {
     top: var(--semi-portrait-top);
     right: calc((80vh / 3061 * 324) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px) + var(--mobile-right));
@@ -57,57 +58,72 @@
   }
 
   .torso-line {
-    right : 25vh;
-    top : 18.4vh;
+    right :calc(13vh + var(--mobile-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .torso-info {
-    top : 15vh;  
-    right : 40vh;
+    top : calc(15vh + var(--semi-portrait-top));  
+    right : calc(28vh + var(--mobile-right));
+    z-index:1000;
   }
 
   .dress-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(13vh + var(--mobile-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .dress-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(13vh + var(--mobile-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shawl-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(13vh + var(--mobile-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shawl-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(20vh + var(--mobile-right));
+    top : calc(19.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .pants-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(24vh + var(--mobile-right));
+    top : calc(59.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .pants-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29vh + var(--mobile-right));
+    top : calc(55.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shoes-line {
-    top : 40vh;
-    right : 25vh;
+    right :calc(28vh + var(--mobile-right));
+    top : calc(76.4vh + var(--semi-portrait-top));
+    z-index:1000;
   }
 
   .shoes-info {
-    top : 40vh;
-    right : 40vh;
+    right :calc(29.5vh + var(--mobile-right));
+    top : calc(72vh + var(--semi-portrait-top));
+    z-index:1000;
+  }
+
+  .info-box span {
+    font-size: 2vh;
   }
 }
 
-@media (min-width:401px) {
+@media (min-width:601px)
+and (orientation:landscape) {
   .head {
     top: var(--semi-portrait-top);
     right: calc((80vh / 3061 * 324) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px) + var(--other-right));
@@ -207,9 +223,13 @@
     top : 40vh;
     right : 40vh;
   }
+
+  .info-box span {
+    font-size: 3.2vh;
+  }
 }
 
-@media (max-height:400px)
+@media (max-height:600px)
 and (orientation:landscape) {
   .head {
     top: var(--landscape-phone-top);
@@ -310,6 +330,10 @@ and (orientation:landscape) {
     top : 40vh;
     right : 40vh;
   }
+
+  .info-box span {
+    font-size: 3.2vh;
+  }
 }
 
 .img-act:hover{
@@ -390,8 +414,6 @@ and (orientation:landscape) {
 
 .torso-info {
   position:absolute;
-
-  top : 15vh;
   border : 2px solid black;
   padding:2vh;
   opacity: 0;
@@ -403,8 +425,6 @@ and (orientation:landscape) {
 .torso-line {
   position : absolute;
   background-color:black;
-
-  top : 18.4vh;
   height:0.2vh;
   transition: width 1s;
 }
@@ -510,8 +530,6 @@ and (orientation:landscape) {
 
 .pants-info {
   position:absolute;
-  right : 40vh;
-  top : 60vh;
   border : 2px solid black;
   padding:2vh;
   opacity: 0;
@@ -523,8 +541,6 @@ and (orientation:landscape) {
 .pants-line {
   position : absolute;
   background-color:black;
-  right : 35vh;
-  top : 63.4vh;
   height:0.2vh;
   transition: width 1s;
 }
@@ -562,22 +578,30 @@ and (orientation:landscape) {
   height: calc((80vh / 3061 * 311) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px));
 }
 
-.torso-line {
+.shoes-line {
   position : absolute;
   background-color:black;
-  right : 25vh;
-  top : 18.4vh;
   height:0.2vh;
   transition: width 1s;
 }
 
-.torso:hover + .torso-line {
+.shoes-info {
+  position:absolute;
+  border : 2px solid black;
+  padding:2vh;
+  opacity: 0;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, white 50%, #0BD904 50%);
+  transition : background-position 1s, color 3s, font-weight 4s;
+}
+
+.shoes:hover + .shoes-line {
   transition-delay:1s;
-  animation: line-effect 1s;
+  animation: line-effect-shoes 1s;
   animation-fill-mode: forwards;
 }
 
-.torso:hover + .torso-line + .torso-info  {
+.shoes:hover + .shoes-line + .shoes-info  {
   transition-delay:2s;
   animation: border-info-effect 2s;
   animation-fill-mode: forwards;
@@ -586,9 +610,19 @@ and (orientation:landscape) {
   font-weight: bolder;
 }
 
+@keyframes line-effect-shoes {
+  0% {
+    width: 0vh;
+  }
+  50% {
+    width: 0.75vh;
+  }
+  100% {
+    width: 1.5vh;
+  }
+}
 .left-hand {
   position:absolute;
-
   opacity: 1;
   width:auto;
   height: calc((80vh / 3061 * 235) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px));
@@ -597,12 +631,16 @@ and (orientation:landscape) {
 
 .right-hand {
   position:absolute;
-
-
   opacity: 1;
   width:auto;
   height: calc((80vh / 3061 * 98) + (((6vh * 4 + 3 * 15vw) * 2 + 43px) - (15 * (15vw * 2 - 4px) + 6vh * 8) - (2 * (51px - 12 * 15vw)) - 1px));
 }
 
+.item-value {
+  display:block;
+}
 
+.info-box {
+  text-align:center;
+}
 

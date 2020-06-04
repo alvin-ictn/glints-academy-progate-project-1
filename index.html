@@ -5,13 +5,12 @@
 <link rel="stylesheet" href="assets\css\stylesheet.css">
 </head>
 <body>
-
 <img class="head" src="assets\img\landing-head.png" onmousedown="return false"/>
-<img onmouseout="document.querySelector('.torso-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act torso" src="assets\img\landing-torso.png" onmousedown="return false"/>
+<img onmouseout="document.querySelector('.torso-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act torso" src="assets\img\landing-torso.png" onmousedown="return false" onclick="goToElement('#mysection',this.className)"/>
 <div class="torso-line"></div>
-<div class="torso-info">
+<div class="torso-info info-box" onclick="goToElement('#mysection',this.className)">
   <span>Torso</span>
-  <span class="torso-item">0 Products</span>
+  <span class="torso-item item-value">0 Products</span>
 </div>
 
 <div class="dress">
@@ -25,22 +24,23 @@
 
 <img onmouseout="document.querySelector('.pants-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.pants-item',0,100,1000)" class="img-act pants" src="assets\img\landing-pants.png" onmousedown="return false"/>
 <div class="pants-line"></div>
-<div class="pants-info">
+<div class="pants-info info-box">
   <span>Pants</span>
-  <span class="pants-item">0 Products</span>
+  <span class="pants-item item-value">0 Products</span>
 </div>
 
-<img onmouseout="document.querySelector('.shoes-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.torso-item',0,100,1000)" class="img-act shoes" src="assets\img\landing-shoes.png" onmousedown="return false"/>
+<img onmouseout="document.querySelector('.shoes-item').innerHTML='0 Products';clearTimeout(myTimeout)" onmouseover="testfun('.shoes-item',0,100,1000)" class="img-act shoes" src="assets\img\landing-shoes.png" onmousedown="return false"/>
 <div class="shoes-line"></div>
-<div class="shoes-info">
+<div class="shoes-info info-box">
   <span>Shoes</span>
-  <span class="shoes-item">0 Products</span>
+  <span class="shoes-item item-value">0 Products</span>
 </div>
 
 <img class="left-hand" src="assets\img\landing-left-hand.png">
 <img class="right-hand" src="assets\img\landing-right-hand.png">
 
-
+<div style="top:1500px;position: absolute;" id="mysection">hehasdsaeh</div>
+<div id="test">ee</div>
 </body>
   <footer>
     <script>
@@ -61,11 +61,15 @@
             }
           }, stepTime);
         }, 3000);
-        
       }
       
-      const number_animate = () => {
+      const goToElement = (link,element=null) => {
 
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+          element.split(' ')[1] == "info-box" ? document.querySelector(link).scrollIntoView() : null
+        }else {
+          document.querySelector(link).scrollIntoView()
+        }
       }
     </script>
   </footer>
