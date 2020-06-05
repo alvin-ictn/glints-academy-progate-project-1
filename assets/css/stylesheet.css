@@ -1,6 +1,6 @@
 :root {
   --mobile-right : 1vh;
-  --other-right  : 10vh;
+  --other-right  : 15vh;
   --semi-portrait-top: 15vh;
   --phone-top: 10vh;
   --landscape-phone-top : 2vh;
@@ -275,11 +275,10 @@ and (orientation:landscape) {
 
   .top-logo img {
     height:10vh;
-    margin-top:1vh;
   }
 
   .stickTopNav{
-    height:calc(5vh + var(--semi-portrait-top))
+    height:calc(var(--semi-portrait-top))
   }
 
   .top-menu {
@@ -288,8 +287,8 @@ and (orientation:landscape) {
 
   .companyInfo {
     position:absolute;
-    top: calc(20vh + var(--semi-portrait-top));
-    left: 10vh;
+    top: calc(5vh + var(--semi-portrait-top));
+    left:10vw;
   }
   
   .promo-head {
@@ -432,13 +431,13 @@ and (orientation:landscape) {
   }
 
   .dummy {
-    flex-grow: 4;
+    flex-grow: 5;
   }
 
   .companyInfo {
     position:absolute;
     top: calc(8vh + var(--semi-portrait-top));
-    left: 10vh;
+    left: 20vh;
   }
   
   .promo-head {
