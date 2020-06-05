@@ -5,7 +5,6 @@
   --landscape-phone-top : 2vh;
   --top-bg-col:#99D0F2;
   --info-box-color: rgba(0,0,0,0) 50%, #0BD904 50%;
-  --filter-shadow:0.189vh;
 }
 
 @media (max-width:1366px)
@@ -63,37 +62,37 @@ and (orientation:portrait){
   .torso-line {
     right :calc(13vh + var(--mobile-right));
     top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .torso-info {
     top : calc(15vh + var(--semi-portrait-top));  
     right : calc(28vh + var(--mobile-right));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-line {
     right :calc(24vh + var(--mobile-right));
     top : calc(59.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-info {
     right :calc(29vh + var(--mobile-right));
     top : calc(54.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-line {
     right :calc(28vh + var(--mobile-right));
     top : calc(76.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-info {
     right :calc(29.5vh + var(--mobile-right));
     top : calc(72vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .info-box span {
@@ -107,6 +106,10 @@ and (orientation:portrait){
   .top-menu {
     font-size:2vh;
   }
+  
+  .stickTopNav{
+    height:calc(var(--semi-portrait-top))
+  }
 
   .companyInfo {
     top: calc(20vh + var(--semi-portrait-top));
@@ -116,6 +119,10 @@ and (orientation:portrait){
     height:100vh;
   }
   
+  .topAdd {
+    padding-top:1vh;
+  }
+
   .promo-head {
     font-size:8vh;
     font-variant: small-caps;
@@ -228,37 +235,37 @@ and (orientation:landscape) {
   .torso-line {
     right :calc(13vh + var(--other-right));
     top : calc(19.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .torso-info {
     top : calc(15vh + var(--semi-portrait-top));  
     right : calc(28vh + var(--other-right));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-line {
     right :calc(24vh + var(--other-right));
     top : calc(59.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-info {
     right :calc(29vh + var(--other-right));
     top : calc(54.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-line {
     right :calc(28vh + var(--other-right));
     top : calc(76.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-info {
     right :calc(29.5vh + var(--other-right));
     top : calc(70.4vh + var(--semi-portrait-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .info-box span {
@@ -267,6 +274,10 @@ and (orientation:landscape) {
 
   .top-logo img {
     height:15vh;
+  }
+
+  .stickTopNav{
+    height:calc(5vh + var(--semi-portrait-top))
   }
 
   .top-menu {
@@ -369,37 +380,37 @@ and (orientation:landscape) {
   .torso-line {
     right :calc(13vh + var(--other-right));
     top : calc(19.4vh + var(--landscape-phone-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .torso-info {
     top : calc(15vh + var(--landscape-phone-top));  
     right : calc(28vh + var(--other-right));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-line {
     right :calc(24vh + var(--other-right));
     top : calc(59.4vh + var(--landscape-phone-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .pants-info {
     right :calc(29vh + var(--other-right));
     top : calc(54.4vh + var(--landscape-phone-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-line {
     right :calc(28vh + var(--other-right));
     top : calc(76.4vh + var(--landscape-phone-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .shoes-info {
     right :calc(29.5vh + var(--other-right));
     top : calc(69.4vh + var(--landscape-phone-top));
-    z-index:1000;
+    z-index:10;
   }
 
   .info-box span {
@@ -408,6 +419,10 @@ and (orientation:landscape) {
   
   .top-logo img {
     height:15vh;
+  }
+
+  .stickTopNav{
+    height:calc(10vh + var(--semi-portrait-top));
   }
 
   .top-menu {
@@ -509,6 +524,12 @@ body, .topBackground,html {
   display:flex;
   color:white;
   align-items: center;
+}
+
+.stickTopNav {
+  position:fixed;
+  width:100%;
+  background-color: rgb(97, 97, 97);
 }
 
 .top-logo {
@@ -796,3 +817,6 @@ body, .topBackground,html {
   text-align:center;
 }
 
+.stickTopNav {
+  z-index:100;
+}

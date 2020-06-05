@@ -104,13 +104,28 @@
       }
       
       const goToElement = (link,element=null) => {
-
+        let thisEle =  document.querySelector(link)
+        let Position = thisEle.getBoundingClientRect().top + window.pageYOffset - (screen.height*9/100)
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            console.log(element)
-          element.split(' ')[1] == "info-box" ? document.querySelector(link).scrollIntoView({ behavior: 'smooth'}) : null
+          element.split(' ')[1] == "info-box" ? window.scrollTo({top:Position,behavior:'smooth'}) : null
         }else {
-          document.querySelector(link).scrollIntoView({ behavior: 'smooth'})
+            window.scrollTo({top:Position,behavior:'smooth'})
         }
+      }
+
+      window.onscroll = () => {
+          fixIt()
+        }
+      topNav = document.querySelector('.topNav');
+      topDesc = document.querySelector('.companyInfo');
+      const fixIt = () => {
+          if (window.pageYOffset > screen.height*86/100) {
+            topNav.classList.add('stickTopNav')
+            topDesc.classList.add('topAdd')
+          }else {
+            topNav.classList.remove('stickTopNav')
+            topDesc.classList.remove('topAdd')
+          }
       }
     </script>
   </footer>
