@@ -5,7 +5,4 @@
 3. Rizka Shinta W	==> email @rizkashintaw@gmail.com
 4. Leo Pordo da Meyer Simto, SE	==> email @simto1983@gmail.com
 
-
-REPO : THE REPOSITORY
-
-DEMO : THE DEMO SITE
+DEMO : https://alvin-ictn.github.io/glintsprogate/
