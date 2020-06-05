@@ -148,7 +148,7 @@ and (orientation:portrait){
 
   .promo-description {
     margin:1vh 0;
-    font-size:4.5vh;
+    font-size:3vh;
   }
 
   .promo-foot a{
@@ -517,15 +517,18 @@ and (orientation:landscape) {
     drop-shadow(-0.189vh -0.189vh 0 red);
     
 }
-body, .topBackground,html {
+body, .landingPage,html {
   margin:0;
   padding:0;
 }
 
 .topNav {
+  position:absolute;
+  top:0;
   display:flex;
   color:white;
   align-items: center;
+  width:100%;
 }
 
 .stickTopNav {
@@ -545,7 +548,7 @@ body, .topBackground,html {
   justify-content: space-around;
 }
 
-.topBackground {
+.landingPage {
   background-color:var(--top-bg-col);
   width:100%;
   height:100vh;
